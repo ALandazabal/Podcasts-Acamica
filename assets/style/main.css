@@ -110,7 +110,7 @@ li{
 }
 
 @media (min-width: 700px) { 
-	.logo{
+	/*.logo{
 		width: 50%;
 	}
 	.logo img{
@@ -121,8 +121,42 @@ li{
 	}
 	.menu span{
 		font-size: 4em;
+	}*/
+	.nav{
+		display: none;
+	}
+	.topnav {
+	  	position: relative;
 	}
 
+	/* Hide the links inside the navigation menu (except for logo/home) */
+	.topnav #myLinks {
+	  	display: none;
+	  	background: #0000EC;
+	}
+
+	/* Style navigation menu links */
+	.topnav a {
+	  	padding: 14px 16px;
+	  	text-decoration: none;
+	  	font-size: 17px;
+	  	display: block;
+	  	color: white;
+	}
+
+	/* Style the hamburger menu */
+	.topnav a.icon {
+	  	display: block;
+	  	position: absolute;
+	  	right: 0;
+	  	top: 0;
+		color: black;
+	}
+
+	/* Add a grey background color on mouse-over */
+	/*.topnav a:hover {
+	  color: black;
+	}*/
 	.title{
 		padding: 2em;
 	}
