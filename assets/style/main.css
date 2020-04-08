@@ -3,13 +3,30 @@
 	--color-title-text: #FFFFFF;
 	--button-color: #00F3BB;
 	--button-colot-text: #000;
+	--font-family-main: "Lucida Console", Courier, monospace;
 }
 * {
 	padding: 0;
 	margin: 0;
+	font-family: var(--font-family-main);
 }
 header, footer{
-	padding: 1em 2em;
+	padding: 1em 4em;
+}
+header{
+	/*position: sticky;*/
+    top: 0;
+    background: white;
+    z-index: 100;
+}
+.nav{
+	padding: 0 3em;
+}
+.nav, .img-hidden{
+	display: block;
+}
+.topnav, .img-hidden_{
+	display: none;
 }
 .logo, .menu, .copyright, .redes{
 	display: inline-block;
@@ -20,21 +37,53 @@ header, footer{
 li{
 	list-style: none;
 	display: inline-block;
-	margin: 0 .5em;
+	margin: 0 1em;
+}
+li a {
+  	text-decoration: none;
+  	color: black;
+  	/*font-size: 17px;
+  	padding: 14px 16px;
+  	display: block;*/
+}
+li a:hover{
+	color: var(--button-color);
+	text-decoration: line-through;
+}
+li a:active{
+	color: rgba(6, 10, 36, 0.56);
+	text-decoration: line-through;
 }
 .title{
 	padding: 2em 11em;
 }
+h1{
+	font-size: 3em;
+}
 .title > p{
-	width: 50%;
+	width: 65%;
 }
 .title > a, .novedades > a{
-	padding: 1em;
-    margin: 1em 0;
+	padding: 1em 4em;
+    margin: 3em 0 0;
     background-color: var(--button-color);
     display: inline-block;
     text-decoration: none;
     color: var(--button-colot-text);
+}
+.title > a:hover, .novedades > a:hover{
+	color: white;
+	background: rgba(0,240,184,1);
+	background: -moz-linear-gradient(left, rgba(0,240,184,1) 0%, rgba(0,240,184,1) 11%, rgba(0,0,254,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,240,184,1)), color-stop(11%, rgba(0,240,184,1)), color-stop(100%, rgba(0,0,254,1)));
+	background: -webkit-linear-gradient(left, rgba(0,240,184,1) 0%, rgba(0,240,184,1) 11%, rgba(0,0,254,1) 100%);
+	background: -o-linear-gradient(left, rgba(0,240,184,1) 0%, rgba(0,240,184,1) 11%, rgba(0,0,254,1) 100%);
+	background: -ms-linear-gradient(left, rgba(0,240,184,1) 0%, rgba(0,240,184,1) 11%, rgba(0,0,254,1) 100%);
+	background: linear-gradient(to right, rgba(0,240,184,1) 0%, rgba(0,240,184,1) 11%, rgba(0,0,254,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f0b8', endColorstr='#0000fe', GradientType=1 );
+}
+.line-through{
+	text-decoration: line-through;
 }
 .episodios{
 	clip-path: polygon(100% 0%, 100% 15%, 100% 85%, 0 100%, 0% 85%, 0% 15%);
@@ -47,21 +96,24 @@ li{
 }
 .episodios > h3, .novedades > h3{
 	color: var(--color-title-text);
-	padding: 0em 5em;
-    font-size: 2em;
+	padding: 0em 3.5em;
+    font-size: 3em;
+}
+.episodios .row{
+	text-align: center;
 }
 .md-6{
 	width: 40%;
     display: inline-block;
-    padding: 1% 4%;
+    padding: 1% 2%;
 }
 .md-6 > img{
 	width: 100%;
 }
-.img-hidden{
+/*.img-hidden{
 	display: none;
 }
-
+*/
 .qsomos{
 	padding: 0em 9em;
 }
@@ -69,36 +121,51 @@ li{
 	display: inline-block;
 	/*position: relative;
     top: -10em;*/
-    vertical-align: middle
+    vertical-align: middle;
+    margin-left: 5em;
 }
 .img-phone{
-	height: 50em;
+	height: 30em;
 }
 .img-phone>img{
 	position: relative;
     top: -10em;
-    height: 60em;
+    height: 40em;
 }
 .text-qsomos{
-	width: 30%
+	width: 40%;
+	top: -5em;
+    position: relative;
 }
 .text-qsomos > h3{
 	font-size: 2.5em;
 	padding: 0.2em 0;
 }
+.qsomos p{
+	margin: 0.5em 0;
+}
 .invitados>h3, .temas>h3{
-	margin: 1em 3em;
+	margin: 1em 4.5em;
     font-size: 2.5em;
 }
+.row{
+	font-size: 0;
+}
 .row > img{
-	width: 33%;
+	width: 33.3%;
 }
 .temas>.row{
 	padding: 2% 10%;
+	text-align: center;
+	font-size: 1.5em;
 }
 .md-3{
 	display: inline-block;
 	width: 20%;
+	vertical-align: text-top;
+}
+.md-3 p {
+	font-weight: bold;
 }
 .novedades{
 	clip-path: polygon(100% 1%, 100% 25%, 100% 100%, 0 100%, 0% 75%, 0% 25%);
@@ -106,10 +173,10 @@ li{
 	text-align: center;
 }
 .redes > span{
-	margin: 0 0.5em;
+	margin: 0 1em;
 }
 
-@media (min-width: 700px) { 
+@media (max-width: 600px) {
 	/*.logo{
 		width: 50%;
 	}
@@ -122,11 +189,15 @@ li{
 	.menu span{
 		font-size: 4em;
 	}*/
-	.nav{
+	header, footer{
+		padding: 0em;
+	}
+	.nav, .img-hidden{
 		display: none;
 	}
-	.topnav {
+	.topnav, .img-hidden_ {
 	  	position: relative;
+	  	display: block;
 	}
 
 	/* Hide the links inside the navigation menu (except for logo/home) */
@@ -152,6 +223,12 @@ li{
 	  	top: 0;
 		color: black;
 	}
+	#show-menu{
+		display: block;
+	}
+	#hide-menu{
+		display: none;
+	}
 
 	/* Add a grey background color on mouse-over */
 	/*.topnav a:hover {
@@ -159,79 +236,94 @@ li{
 	}*/
 	.title{
 		padding: 2em;
+		text-align: center;
 	}
 	h1{
-		font-size: 9em;
+		font-size: 2em;
+		text-align: initial;
 	}
 	.title > p{
-		font-size: 2em;
+		font-size: 1em;
 		width: 100%;
+		text-align: initial;
+		margin: 1em 0;
 	}
 	.title a, .novedades a {
 		width: -webkit-fill-available;
 	    margin: 1em;
 	    text-align: center;
-	    font-size: 3em;
+	    font-size: 1em;
+	    padding: 1em;
 	}
 	.episodios{
 		clip-path: polygon(100% 0%, 100% 5%, 100% 95%, 0 100%, 0% 95%, 0% 5%);
-    	padding: 10% 0 25%;
+    	padding: 10% 0 35%;
 	}
 	.episodios h3, .novedades h3{
-		font-size: 5em;
-    	padding: .1em 1em;
+		font-size: 2em;
+		padding: 1.5em 0.5em 0.5em;
 	}
 	.md-6{
 		display: block;
-    	width: 100%;
+    	width: auto;
 	}
 	.qsomos{
 		padding: 0;
 	}
 	.qsomos div{
 		height: auto;
-	    width: 100%;
-	    position: relative;
-	    top: -10em;
-	    padding: 4em;
+		width: 100%;
+		position: relative;
+		top: -5em;
+		padding: 0;
+		margin: 0;
 	}
 	.img-phone img{
 		width: 100%;
     	height: 100%;
 	    top: 0em;
 	}
-	.text-qsomos h3, .invitados h3, .temas h3{
-		font-size: 8em;
-		margin: 0;
+	.text-qsomos h3{
+		font-size: 2.5em;
+		margin: 1em 0.5em 0;
 	}
 	.text-qsomos p{
-		font-size: 4em;
+		font-size: 1em;
+		margin: 1em;
 	}
-	.invitados h3, .temas h3{
-		padding: 0 0.5em;
+	.invitados h3{
+		font-size: 2.5em;
+		margin: 0 0.5em;
 	}
 	.row img{
 		width: 100%;
 	}
+	.temas h3{
+		font-size: 2em;
+		margin: 1em 0.5em 0;
+	}
 	.md-3{
 		display: block;
     	width: 100%;
+    	padding: 1.5em 0;
+	}
+	.md-3 img{
+		width: 50%;
 	}
 	.md-3 p{
 		text-align: center;
-    	font-size: 5em;
+    	font-size: 1em;
+    	margin: 1em 0 0;
 	}
+	
 	.novedades{
 		clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
-	}
-	footer{
-		/*padding: 2em;*/
-    	font-size: 2em;
 	}
 	.copyright, .redes{
 		display: block;
 		text-align: center;
 		float: none;
-		margin: 1.5em;
+		margin: 1.5em 0;
+		font-size: 1.1em;
 	}
 }

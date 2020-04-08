@@ -14,14 +14,15 @@
 			</a>
 			  <!-- Navigation links (hidden by default) -->
 			<div id="myLinks">
-			    <a href="#news">EPISODIOS</a>
-			    <a href="#contact">NOSOTROS</a>
-			    <a href="#about">ENTREVISTAS</a>
-			    <a href="#about">T&Oacute;PICOS</a>
+			    <a href="#episodiosSec">EPISODIOS</a>
+			    <a href="#nosotrosSec">NOSOTROS</a>
+			    <a href="#entrevistasSec">ENTREVISTAS</a>
+			    <a href="#topicosSec">T&Oacute;PICOS</a>
 			</div>
 			  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-			    <i class="fa fa-bars"></i>
+			    <i id="show-menu" class="fa fa-bars"></i>
+			    <i id="hide-menu" class="fas fa-times hide"></i>
 			</a>
 		</div>
 		<div class="nav">
@@ -29,11 +30,11 @@
 				<img src="assets/img/logo.svg" alt="Logo">
 			</div>
 			<div class="menu">
-				<ul  id="myLinks">
-					<li>EPISODIOS</li>
-					<li>NOSOTROS</li>
-					<li>ENTREVISTAS</li>
-					<li>T&Oacute;PICOS</li>
+				<ul>
+					<li><a href="#episodiosSec">EPISODIOS</a></li>
+					<li><a href="#nosotrosSec">NOSOTROS</a></li>
+					<li><a href="#entrevistasSec">ENTREVISTAS</a></li>
+					<li><a href="#topicosSec">T&Oacute;PICOS</a></li>
 				</ul>
 			</div>
 		</div>
@@ -41,43 +42,44 @@
 	</header>
 	<div class="container">
 		<div class="title">	
-			<h1>Hello world pale blue dot.</h1>
+			<h1>Hello <span class="line-through">world</span> pale blue dot.</h1>
 			<p>El portal de podcasts que explora el mundo de la programación y la tecnología.  Nuevos episodios, todos los jueves cada 15 d&iacute;as.</p>
 			<a href="#">CONOC&Eacute; M&Aacute;S</a>
 		</div>
-		<div class="episodios">
+		<div id="episodiosSec" class="episodios">
 			<h3>Episodios</h3>
 			<div class="row">
 				<div class="podcast md-6">
-					<img class="img-hidden" src="assets/img/embed1.png">
-					<img class="img-hidden_" src="assets/img/embed1_.png">
+					<img class="img-hidden" src="assets/img/embed1.png" alt="podcast">
+					<img class="img-hidden_" src="assets/img/embed1_.png" alt="podcast">
 				</div>
 				<div class="podcast md-6">
-					<img class="img-hidden" src="assets/img/embed2.png">
-					<img class="img-hidden_" src="assets/img/embed2_.png">
+					<img class="img-hidden" src="assets/img/embed2.png" alt="podcast">
+					<img class="img-hidden_" src="assets/img/embed2_.png" alt="podcast">
 				</div>
 			</div>
 			<div class="row">
 				<div class="podcast md-6">
-					<img class="img-hidden" src="assets/img/embed3.png">
-					<img class="img-hidden_" src="assets/img/embed3_.png">
+					<img class="img-hidden" src="assets/img/embed3.png" alt="podcast">
+					<img class="img-hidden_" src="assets/img/embed3_.png" alt="podcast">
 				</div>
 				<div class="podcast md-6">
-					<img class="img-hidden" src="assets/img/embed4.png">
+					<img class="img-hidden" src="assets/img/embed4.png" alt="podcast">
 				</div>
 			</div>
 		</div>
-		<div class="qsomos">
+		<div id="nosotrosSec" class="qsomos">
 			<div class="img-phone">
-				<img src="assets/img/phone.png">
+				<img src="assets/img/phone.png" alt="Imagen de teléfono">
 			</div>
 			<div class="text-qsomos">
 				<h3>De d&oacute;nde venimos</h3>
 				<p>Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light.</p>
+				
 				<p>Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
 			</div>
 		</div>
-		<div class="invitados">
+		<div id="entrevistasSec" class="invitados">
 			<h3>Invitadas/os estelares</h3>
 			<div class="row">
 				<img src="assets/img/grace-hopper.png" alt="Grace Hopper">
@@ -90,7 +92,7 @@
 				<img src="assets/img/susan-kare.png" alt="Susan Kare">
 			</div>
 		</div>
-		<div class="temas">
+		<div id="topicosSec" class="temas">
 			<h3>Algunos de nuestros temas</h3>
 			<div class="row">
 				<div class="md-3">
@@ -110,6 +112,36 @@
 					<p>Seguridad informática</p>
 				</div>
 			</div>
+			<!-- <div class="row">
+				<div class="md-3">
+					<img src="assets/img/icon1.svg" alt="Trabajo remoto">
+				</div>
+				<div class="md-3">
+					<img src="assets/img/icon2.svg" alt="Repensando la programación">
+				
+				</div>
+				<div class="md-3">
+					<img src="assets/img/icon3.svg" alt="Bases del código">
+				
+				</div>
+				<div class="md-3">
+					<img src="assets/img/icon4.svg" alt="Seguridad informática">
+				</div>
+			</div>
+			<div class="row">
+				<div class="md-3">
+					<p>Trabajo remoto</p>
+				</div>
+				<div class="md-3">
+					<p>Repensando la programación</p>
+				</div>
+				<div class="md-3">
+					<p>Bases del código</p>
+				</div>
+				<div class="md-3">
+					<p>Seguridad informática</p>
+				</div>
+			</div> -->
 		</div>
 		<div class="novedades">
 			<h3>¿Quer&eacute;s las &uacute;ltimas novedades?</h3>
@@ -118,7 +150,7 @@
 	</div>
 	<footer>
 		<div class="copyright">
-			<p>@ 2019 - Hello blue pale dot</p>
+			<p><i class="far fa-copyright"></i> 2019 - Hello blue pale dot</p>
 		</div>
 		<div class="redes">
 			<span><i class="fab fa-spotify"></i></span>
@@ -128,16 +160,22 @@
 			<span><i class="fab fa-telegram"></i></span>
 		</div>
 	</footer>
-</body>
-<script type="text/javascript">
-	/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-	function myFunction() {
-		var x = document.getElementById("myLinks");
-		if (x.style.display === "block") {
-		    x.style.display = "none";
-		} else {
-		    x.style.display = "block";
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myLinks");
+			var sh = document.getElementById("show-menu");
+			var hd = document.getElementById("hide-menu");
+			if (x.style.display === "block") {
+			    x.style.display = "none";
+			    sh.style.display = "block";
+			    hd.style.display = "none";
+
+			} else {
+			    x.style.display = "block";
+			    sh.style.display = "none";
+			    hd.style.display = "block";
+			}
 		}
-	}
-</script>
+	</script>
+</body>
 </html>
